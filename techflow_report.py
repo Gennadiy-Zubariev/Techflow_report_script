@@ -12,6 +12,7 @@ from collections import Counter
 
 from pyairtable import Api
 from dotenv import load_dotenv
+from  dashboard_html import generate_dashboard_html, save_dashboard
 
 load_dotenv()
 
@@ -235,7 +236,7 @@ def save_csv(report, directory, filename):
         writer.writerow(["Period", report["period"]])
         writer.writerow([])
 
-        writer.writerow(["=== ОСНОВНІ МЕТРИКИ ==="])
+        writer.writerow(["--- ОСНОВНІ МЕТРИКИ ---"])
         writer.writerow(["Нових запитів за тиждень", metrics["new_requests_this_week"]])
         writer.writerow(["Закритих запитів за тиждень", metrics["closed_requests_this_week"]])
         writer.writerow(["Середній час обробки (годин)", metrics["avg_processing_time_hours"]])
@@ -245,13 +246,13 @@ def save_csv(report, directory, filename):
         writer.writerow(["Загальна кількість запитів", metrics["total_requests"]])
         writer.writerow([])
 
-        writer.writerow(["=== ТОП-3 КОНСУЛЬТАНТИ (закриті запити) ==="])
+        writer.writerow(["--- ТОП-3 КОНСУЛЬТАНТИ (закриті запити) ---"])
         writer.writerow(["Консультант", "Закритих запитів"])
         for consultant in metrics["top_3_consultants"]:
             writer.writerow([consultant["name"], consultant["closed_count"]])
         writer.writerow([])
 
-        writer.writerow(["=== РОЗПОДІЛ ПО ПОСЛУГАХ ==="])
+        writer.writerow(["--- РОЗПОДІЛ ПО ПОСЛУГАХ ---"])
         writer.writerow(["Послуга", "Кількість запитів", "Відсоток від загальних запитів"])
         for service in metrics["service_stats"]:
             writer.writerow([
@@ -261,19 +262,19 @@ def save_csv(report, directory, filename):
             ])
         writer.writerow([])
 
-        writer.writerow(["=== НАВАНТАЖЕННЯ КОНСУЛЬТАНТІВ (відкриті запити) ==="])
+        writer.writerow(["--- НАВАНТАЖЕННЯ КОНСУЛЬТАНТІВ (відкриті запити) ---"])
         writer.writerow(["Консультант", "Відкритих запитів"])
         for name, count in metrics["consultant_workload"].items():
             writer.writerow([name, count])
         writer.writerow([])
 
-        writer.writerow(["=== НОВІ ЗАПИТИ ЗА ТИЖДЕНЬ ==="])
+        writer.writerow(["--- НОВІ ЗАПИТИ ЗА ТИЖДЕНЬ ---"])
         writer.writerow(["Request ID", "Послуга", "Консультант", "Статус", "Створено"])
         for r in report["details"]["new_requests"]:
             writer.writerow([r["request_id"], r["service"], r["assignee"], r["status"], r["created_at"]])
         writer.writerow([])
 
-        writer.writerow(["=== ЗАКРИТІ ЗАПИТИ ЗА ТИЖДЕНЬ ==="])
+        writer.writerow(["--- ЗАКРИТІ ЗАПИТИ ЗА ТИЖДЕНЬ ---"])
         writer.writerow(["Request ID", "Послуга", "Консультант", "Закрито"])
         for r in report["details"]["closed_requests"]:
             writer.writerow([r["request_id"], r["service"], r["assignee"], r["closed_at"]])
@@ -381,7 +382,7 @@ def format_email_body(report):
     return html
 
 
-def send_email(report, csv_path, json_path):
+def send_email(report, csv_path, json_path, dashboard_path):
     """
     Sends a report to the email manager.
 
@@ -389,9 +390,7 @@ def send_email(report, csv_path, json_path):
     - HTML body with metrics and tables
     - Attached CSV file
     - Attached JSON file
-
-    Uses SMTP with TLS encryption (port 587).
-    Gmail requires an App Password (not a regular account password).
+    - Attached interactive HTML dashboard
     """
     msg = MIMEMultipart()
     msg["From"] = EMAIL_FROM
@@ -401,19 +400,13 @@ def send_email(report, csv_path, json_path):
     html_body = format_email_body(report)
     msg.attach(MIMEText(html_body, "html", "utf-8"))
 
-    with open(csv_path, "rb") as f:
-        part = MIMEBase("application", "octet-stream")
-        part.set_payload(f.read())
-        encoders.encode_base64(part)
-        part.add_header("Content-Disposition", f"attachment; filename={os.path.basename(csv_path)}")
-        msg.attach(part)
-
-    with open(json_path, "rb") as f:
-        part = MIMEBase("application", "octet-stream")
-        part.set_payload(f.read())
-        encoders.encode_base64(part)
-        part.add_header("Content-Disposition", f"attachment; filename={os.path.basename(json_path)}")
-        msg.attach(part)
+    for filepath in [csv_path, json_path, dashboard_path]:
+        with open(filepath, "rb") as f:
+            part = MIMEBase("application", "octet-stream")
+            part.set_payload(f.read())
+            encoders.encode_base64(part)
+            part.add_header("Content-Disposition", f"attachment; filename={os.path.basename(filepath)}")
+            msg.attach(part)
 
     try:
         with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
@@ -494,6 +487,7 @@ def main():
         print("  🏆 Топ-3 консультанти: немає закритих запитів за період")
     print()
 
+
     date_str = datetime.now(ZoneInfo("Europe/Kyiv")).strftime("%Y-%m-%d")
     date_dir = os.path.join(REPORTS_DIR, date_str)
     os.makedirs(date_dir, exist_ok=True)
@@ -501,10 +495,13 @@ def main():
     json_path = save_json(report, date_dir, f"techflow_report_{date_str}.json")
     csv_path = save_csv(report, date_dir, f"techflow_report_{date_str}.csv")
 
+    dashboard_html = generate_dashboard_html(report)
+    dashboard_path = save_dashboard(dashboard_html, date_dir, f"techflow_dashboard_{date_str}.html")
+
     if email_configured:
         print()
         print("Надсилання звіту на email...")
-        send_email(report, csv_path, json_path)
+        send_email(report, csv_path, json_path, dashboard_path)
     else:
         print()
         print("Email не налаштований — пропускаємо відправку")
@@ -515,3 +512,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

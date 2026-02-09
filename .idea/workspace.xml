@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bdb86b0-feaf-4e6e-8a2c-194676de1ebc" name="Changes" comment="" />
+    <list default="true" id="6bdb86b0-feaf-4e6e-8a2c-194676de1ebc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard_html.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/2026-02-09/techflow_report_2026-02-09.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/2026-02-09/techflow_report_2026-02-09.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/techflow_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/techflow_report.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +22,28 @@
     <option name="cachedIndexableFilesCount" value="14" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Gennadiy-Zubariev&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Gennadiy-Zubariev/Techflow_report_script.git&quot;,
+    &quot;accountId&quot;: &quot;a03fc35a-f43a-4380-851d-956bc53e8417&quot;
+  }
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -33,8 +63,10 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -62,7 +94,7 @@
       <updated>1770544513488</updated>
       <workItem from="1770544514610" duration="11992000" />
       <workItem from="1770566286865" duration="3606000" />
-      <workItem from="1770624036811" duration="5680000" />
+      <workItem from="1770624036811" duration="12347000" />
     </task>
     <servers />
   </component>
