@@ -1,0 +1,250 @@
+{
+  "report_date": "2026-02-09 11:12 (Kyiv)",
+  "period": "2026-02-02 — 2026-02-09",
+  "metrics": {
+    "new_requests_this_week": 23,
+    "closed_requests_this_week": 4,
+    "avg_processing_time_hours": 17.64,
+    "top_3_consultants": [
+      {
+        "name": "Maria",
+        "closed_count": 3
+      },
+      {
+        "name": "Nika",
+        "closed_count": 1
+      }
+    ],
+    "in_progress_count": 3,
+    "overdue_count": 7,
+    "avg_reaction_time_hours": 14.28,
+    "total_requests": 23,
+    "service_stats": [
+      {
+        "service": "Business Audit",
+        "count": 7,
+        "percent": 30.4
+      },
+      {
+        "service": "Marketing Analysis",
+        "count": 7,
+        "percent": 30.4
+      },
+      {
+        "service": "Strategy Development",
+        "count": 6,
+        "percent": 26.1
+      },
+      {
+        "service": "Unknown",
+        "count": 1,
+        "percent": 4.3
+      },
+      {
+        "service": "Financial Consulting",
+        "count": 1,
+        "percent": 4.3
+      },
+      {
+        "service": "IT Transformation",
+        "count": 1,
+        "percent": 4.3
+      }
+    ],
+    "consultant_workload": {
+      "Julia": 9,
+      "Nika": 1
+    }
+  },
+  "details": {
+    "new_requests": [
+      {
+        "request_id": 27,
+        "service": "Business Audit",
+        "assignee": "Julia",
+        "status": "More then 24 hours",
+        "created_at": "2026-02-06 15:29"
+      },
+      {
+        "request_id": 31,
+        "service": "Business Audit",
+        "assignee": "Julia",
+        "status": "Send Email",
+        "created_at": "2026-02-07 11:31"
+      },
+      {
+        "request_id": 39,
+        "service": "Unknown",
+        "assignee": "Unassigned",
+        "status": "Unknown",
+        "created_at": "2026-02-09 08:44"
+      },
+      {
+        "request_id": 26,
+        "service": "Marketing Analysis",
+        "assignee": "Nika",
+        "status": "In progress",
+        "created_at": "2026-02-06 15:16"
+      },
+      {
+        "request_id": 34,
+        "service": "Business Audit",
+        "assignee": "Julia",
+        "status": "New",
+        "created_at": "2026-02-07 11:53"
+      },
+      {
+        "request_id": 21,
+        "service": "Marketing Analysis",
+        "assignee": "Nika",
+        "status": "More then 24 hours",
+        "created_at": "2026-02-06 13:20"
+      },
+      {
+        "request_id": 33,
+        "service": "Business Audit",
+        "assignee": "Julia",
+        "status": "New",
+        "created_at": "2026-02-07 11:53"
+      },
+      {
+        "request_id": 28,
+        "service": "Business Audit",
+        "assignee": "Julia",
+        "status": "Send Email",
+        "created_at": "2026-02-07 11:17"
+      },
+      {
+        "request_id": 32,
+        "service": "Marketing Analysis",
+        "assignee": "Julia",
+        "status": "Send Email",
+        "created_at": "2026-02-07 11:46"
+      },
+      {
+        "request_id": 24,
+        "service": "Marketing Analysis",
+        "assignee": "Nika",
+        "status": "More then 24 hours",
+        "created_at": "2026-02-06 15:07"
+      },
+      {
+        "request_id": 9,
+        "service": "Strategy Development",
+        "assignee": "Unassigned",
+        "status": "In progress",
+        "created_at": "2026-02-06 11:42"
+      },
+      {
+        "request_id": 30,
+        "service": "Financial Consulting",
+        "assignee": "Julia",
+        "status": "Send Email",
+        "created_at": "2026-02-07 11:19"
+      },
+      {
+        "request_id": 10,
+        "service": "Strategy Development",
+        "assignee": "Julia",
+        "status": "In progress",
+        "created_at": "2026-02-06 12:17"
+      },
+      {
+        "request_id": 19,
+        "service": "Strategy Development",
+        "assignee": "Nika",
+        "status": "Closed",
+        "created_at": "2026-02-06 12:21"
+      },
+      {
+        "request_id": 20,
+        "service": "IT Transformation",
+        "assignee": "Nika",
+        "status": "More then 24 hours",
+        "created_at": "2026-02-06 13:19"
+      },
+      {
+        "request_id": 25,
+        "service": "Marketing Analysis",
+        "assignee": "Nika",
+        "status": "More then 24 hours",
+        "created_at": "2026-02-06 15:08"
+      },
+      {
+        "request_id": 17,
+        "service": "Strategy Development",
+        "assignee": "Maria",
+        "status": "Closed",
+        "created_at": "2026-02-06 12:21"
+      },
+      {
+        "request_id": 18,
+        "service": "Strategy Development",
+        "assignee": "Maria",
+        "status": "Closed",
+        "created_at": "2026-02-06 12:21"
+      },
+      {
+        "request_id": 35,
+        "service": "Business Audit",
+        "assignee": "Julia",
+        "status": "Send Email",
+        "created_at": "2026-02-07 11:53"
+      },
+      {
+        "request_id": 29,
+        "service": "Business Audit",
+        "assignee": "Julia",
+        "status": "Send Email",
+        "created_at": "2026-02-07 11:19"
+      },
+      {
+        "request_id": 16,
+        "service": "Strategy Development",
+        "assignee": "Maria",
+        "status": "Closed",
+        "created_at": "2026-02-06 12:21"
+      },
+      {
+        "request_id": 23,
+        "service": "Marketing Analysis",
+        "assignee": "Nika",
+        "status": "More then 24 hours",
+        "created_at": "2026-02-06 14:33"
+      },
+      {
+        "request_id": 22,
+        "service": "Marketing Analysis",
+        "assignee": "Nika",
+        "status": "More then 24 hours",
+        "created_at": "2026-02-06 13:43"
+      }
+    ],
+    "closed_requests": [
+      {
+        "request_id": 19,
+        "service": "Strategy Development",
+        "assignee": "Nika",
+        "closed_at": "2026-02-07 00:00"
+      },
+      {
+        "request_id": 17,
+        "service": "Strategy Development",
+        "assignee": "Maria",
+        "closed_at": "2026-02-08 00:00"
+      },
+      {
+        "request_id": 18,
+        "service": "Strategy Development",
+        "assignee": "Maria",
+        "closed_at": "2026-02-07 00:00"
+      },
+      {
+        "request_id": 16,
+        "service": "Strategy Development",
+        "assignee": "Maria",
+        "closed_at": "2026-02-07 00:00"
+      }
+    ]
+  }
+}
