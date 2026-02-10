@@ -1,0 +1,65 @@
+TechFlow Consulting — Weekly Report
+Report Date,2026-02-09 22:00 (Kyiv)
+Period,2026-02-02 — 2026-02-09
+
+--- ОСНОВНІ МЕТРИКИ ---
+Нових запитів за тиждень,19
+Закритих запитів за тиждень,9
+Середній час обробки (годин),3.54
+Середній час реакції (годин),0.93
+Запитів у роботі,6
+Прострочених запитів (>24г),0
+Загальна кількість запитів,19
+
+--- ТОП-3 КОНСУЛЬТАНТИ (закриті запити) ---
+Консультант,Закритих запитів
+Nika,5
+Julia,4
+
+--- РОЗПОДІЛ ПО ПОСЛУГАХ ---
+Послуга,Кількість запитів,Відсоток від загальних запитів
+Business Audit,7,36.8%
+IT Transformation,5,26.3%
+Strategy Development,3,15.8%
+Marketing Analysis,3,15.8%
+Unknown,1,5.3%
+
+--- НАВАНТАЖЕННЯ КОНСУЛЬТАНТІВ (відкриті запити) ---
+Консультант,Відкритих запитів
+Nika,1
+Julia,5
+Maria,3
+
+--- НОВІ ЗАПИТИ ЗА ТИЖДЕНЬ ---
+Request ID,Послуга,Консультант,Статус,Створено
+47,Strategy Development,Julia,Closed,2026-02-09 15:03
+60,Strategy Development,Nika,Closed,2026-02-09 17:00
+64,Strategy Development,Nika,Send Email,2026-02-09 18:26
+50,Business Audit,Julia,Closed,2026-02-09 15:23
+54,IT Transformation,Julia,Send Email,2026-02-09 16:04
+55,IT Transformation,Julia,In progress,2026-02-09 16:06
+48,Marketing Analysis,Julia,Send Email,2026-02-09 15:05
+53,Business Audit,Julia,Closed,2026-02-09 15:39
+52,Business Audit,Julia,In progress,2026-02-09 15:38
+49,Business Audit,Julia,In progress,2026-02-09 15:17
+58,IT Transformation,Maria,In progress,2026-02-09 16:22
+62,Business Audit,Nika,Closed,2026-02-09 17:46
+63,IT Transformation,Nika,Closed,2026-02-09 17:51
+57,IT Transformation,Maria,In progress,2026-02-09 16:22
+59,Business Audit,Nika,Closed,2026-02-09 16:24
+61,Marketing Analysis,Nika,Closed,2026-02-09 17:25
+51,Marketing Analysis,Julia,Closed,2026-02-09 15:30
+56,Business Audit,Maria,In progress,2026-02-09 16:21
+65,Unknown,Unassigned,Unknown,2026-02-09 19:56
+
+--- ЗАКРИТІ ЗАПИТИ ЗА ТИЖДЕНЬ ---
+Request ID,Послуга,Консультант,Закрито
+47,Strategy Development,Julia,2026-02-09 19:59
+60,Strategy Development,Nika,2026-02-09 19:59
+50,Business Audit,Julia,2026-02-09 19:59
+53,Business Audit,Julia,2026-02-09 19:59
+62,Business Audit,Nika,2026-02-09 19:59
+63,IT Transformation,Nika,2026-02-09 19:59
+59,Business Audit,Nika,2026-02-09 19:59
+61,Marketing Analysis,Nika,2026-02-09 19:59
+51,Marketing Analysis,Julia,2026-02-09 19:59
